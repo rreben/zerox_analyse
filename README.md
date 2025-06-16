@@ -279,6 +279,23 @@ const geminiResult = await zerox({
 });
 ```
 
+### Docker
+
+A `Dockerfile` is provided to build Zerox with all required system packages.
+Build the image from the repository root:
+
+```sh
+docker build -t zerox .
+```
+
+Run the container with your OpenAI API key. The example below executes the
+OpenAI usage example:
+
+```sh
+docker run --rm -e OPENAI_API_KEY=sk-your-key zerox \
+  npx ts-node examples/node/openai.ts
+```
+
 ## Python Zerox
 
 (Python SDK - supports vision models from different providers like OpenAI, Azure OpenAI, Anthropic, AWS Bedrock, etc.)
