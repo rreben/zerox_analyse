@@ -1,5 +1,5 @@
-import { ModelOptions, ModelProvider } from "zerox/node-zerox/dist/types";
-import { zerox } from "zerox";
+import { ModelOptions, ModelProvider } from "../../node-zerox/dist/types";
+import { zerox } from "../../node-zerox/dist";
 
 /**
  * Example using Google Gemini with Zerox to extract structured data from documents.
