@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY package*.json ./
+RUN mkdir -p node-zerox/scripts
+COPY node-zerox/scripts/install-dependencies.js node-zerox/scripts/
 RUN npm install
 
 COPY . .
