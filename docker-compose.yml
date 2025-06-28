@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  zerox:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+    working_dir: /app
+    command: convert --help
+
+# Example usage:
+# 1. Place your PDF in ./input/ directory
+# 2. Set OPENAI_API_KEY in your environment
+# 3. Run: docker-compose run --rm zerox convert -i /app/input/your-file.pdf -o /app/output/result.md
